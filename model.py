@@ -40,7 +40,7 @@ def build(input_shape, num_classes):
     # momentum: float >= 0. 参数更新动量 parameter updates momentum
     # decay: float >= 0. 学习率每次更新的下降率 Learning rate decay over each update
     # nesterov: boolean.是否应用 Nesterov 动量 whether to apply Nesterov momentum
-    opt = keras.optimizers.rmsprop(lr=0.0001, decay=1e-6)
+    opt = keras.optimizers.RMSprop(lr=0.0001, decay=1e-6)
 
     # Let's train the model using RMSprop
     #categorical_crossentropy：亦称作多类的对数损失，注意使用该目标函数时，需要将标签转化为形如(nb_samples, nb_classes)的二值序列
