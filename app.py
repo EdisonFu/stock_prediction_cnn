@@ -11,12 +11,10 @@ def predict():
 
     arr = np.array(img)
 
-    model = m.build((48, 100, 3), 2)
-    print("1")
+    model = m.build((224, 224, 3), 2)
     input = np.array([arr])
-    print("input:",input)
     predict = model.predict(input)
-    print("2")
+    print("predict:",predict)
     text = np.argmax(predict, axis=1)
 
     print("the image is", text)

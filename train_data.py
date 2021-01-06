@@ -8,7 +8,7 @@ image_folder = 'image/train'
 pack_name = 'train_batch'
 
 #empty(shape[], dtype, order]) 依给定的shape, 和数据类型 dtype,  返回一个一维或者多维数组，数组的元素不为空，为随机产生的数据。
-data = {'data': np.empty(shape=(0, 48, 100, 3), dtype=float), 'labels': np.empty(shape=(0, 1), dtype=int)}
+data = {'data': np.empty(shape=(0, 224, 224, 3), dtype=float), 'labels': np.empty(shape=(0, 1), dtype=int)}
 
 i = 0
 print("start packing", image_folder)
