@@ -6,7 +6,7 @@ from six.moves import cPickle
 import model as m
 
 batch_size = 32    # 一次输入的数据量
-num_classes = 2    # 输出分类的个数
+num_classes = 2    # 输出100分类的个数
 epochs = 100       # 迭代的次数
 
 data_train = cPickle.load(open('train_batch', "rb"))
@@ -56,6 +56,6 @@ model.fit(x_train, y_train,
 
 # 评估模型
 score = model.evaluate(x_test, y_test)
-print('acc', score[1])
+print('score:', score)
 
 model.save_weights('weights.hdf5')
